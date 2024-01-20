@@ -1,167 +1,303 @@
-<!--*
- * **************************************************************************
- * ********************                                  ********************
- * ********************      COPYRIGHT INFORMATION       ********************
- * ********************                                  ********************
- * **************************************************************************
- *                                                                          *
- *                                   _oo8oo_                                *
- *                                  o8888888o                               *
- *                                  88" . "88                               *
- *                                  (| -_- |)                               *
- *                                  0\  =  /0                               *
- *                                ___/'==='\___                             *
- *                              .' \\|     |// '.                           *
- *                             / \\|||  :  |||// \                          *
- *                            / _||||| -:- |||||_ \                         *
- *                           |   | \\\  -  /// |   |                        *
- *                           | \_|  ''\---/''  |_/ |                        *
- *                           \  .-\__  '-'  __/-.  /                        *
- *                         ___'. .'  /--.--\  '. .'___                      *
- *                      ."" '<  '.___\_<|>_/___.'  >' "".                   *
- *                     | | :  `- \`.:`\ _ /`:.`/ -`  : | |                  *
- *                     \  \ `-.   \_ __\ /__ _/   .-` /  /                  *
- *                 =====`-.____`.___ \_____/ ___.`____.-`=====              *
- *                                   `=---=`                                *
- * **************************************************************************
- * ********************                                  ********************
- * ********************      				             ********************
- * ********************         佛祖保佑 永远无BUG        ********************
- * ********************                                  ********************
- * **************************************************************************
- *-->
+<!--
+        *                            _ooOoo_
+        *                           o8888888o
+        *                           88" . "88
+        *                           (| -_- |)
+        *                            O\ = /O
+        *                        ____/`---'\____
+        *                      .   ' \\| |// `.
+        *                       / \\||| : |||// \
+        *                     / _||||| -:- |||||- \
+        *                       | | \\\ - /// | |
+        *                     | \_| ''\---/'' | |
+        *                      \ .-\__ `-` ___/-. /
+        *                   ___`. .' /--.--\ `. . __
+        *                ."" '< `.___\_<|>_/___.' >'"".
+        *               | | : `- \`.;`\ _ /`;.`/ - ` : | |
+        *                 \ \ `-. \_ __\ /__ _/ .-` / /
+        *         ======`-.____`-.___\_____/___.-`____.-'======
+        *                            `=---='
+        *
+        *         .............................................
+        *                  佛祖镇楼                  BUG辟易
+        *          佛曰:
+        *                  写字楼里写字间，写字间里程序员；
+        *                  程序人员写程序，又拿程序换酒钱。
+        *                  酒醒只在网上坐，酒醉还来网下眠；
+        *                  酒醉酒醒日复日，网上网下年复年。
+        *                  但愿老死电脑间，不愿鞠躬老板前；
+        *                  奔驰宝马贵者趣，公交自行程序员。
+        *                  别人笑我忒疯癫，我笑自己命太贱；
+        *                  不见满街漂亮妹，哪个归得程序员？
+        *
+    -->
 <!DOCTYPE html>
-<html>
+<html lang="zh">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Pigeon Server">
-    <meta name="keywords" content="Pigeon Server">
-    <meta name="author" content="Pigeon Server">
-    <title>Pigeon Server</title>
-    <link rel="stylesheet" type="text/css" href="./assets/css/onlinewebfonts.css"/>
-    <link rel="stylesheet" type="text/css" href="./assets/css/vno.css">
-    <link rel="stylesheet" type="text/css" href="./assets/css/iconfont.css">
-    <link rel="apple-touch-icon" href="./apple-touch-icon.png">
-    <link rel="icon" href="./favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2024年PigeonServer线上春晚</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            text-align: center;
+            color: #000000;
+            font-size: 36px; /* 标题的字号，较大的值 */
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* 添加阴影效果，增强可读性 */
+        }
+        a {
+            color: blue;
+            transition: color 0.5s;
+        }
+        a:hover {
+            color: red;
+        }
+        footer {
+            text-align: center;
+            background-color: rgba(245, 245, 245, 0.6); /* footer的颜色，柔和白色调 */
+            padding: 10px 0;
+            border-radius: 5px; /* 添加圆角效果 */
+        }
+        @media (max-width: 768px) {
+            /* 在小屏幕上将页脚内元素放置到多行中 */
+        footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        }
+        }
+        @media (min-width: 769px) {
+        /* 在大屏幕上将页脚内元素放置到一行中 */
+        footer {
+              display: flex;
+              justify-content: center;
+            }
+        }
+        section {
+            margin: 10px;
+            padding: 20px;
+            border-radius: 15px;
+            background-color: #ffffff;
+            display: none;
+        }
+        img {
+            width: 150px;
+            height: 150px;
+            transition: transform 0.3s;
+        }
+        img:hover {
+            transform: scale(1.2);
+        }
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 24px;
+            }
+            section {
+                margin: 5px;
+                padding: 10px;
+            }
+            img {
+                width: 100px;
+                height: 100px;
+            }
+        }
+        body {
+            background-color: #F8C3CF; /* 主背景色，柔和的粉红色调 */
+        }
+        section {
+            background-color: rgba(255, 242, 245, 0.3); /* 温馨色调，淡粉白色调 */
+            padding: 50px;
+            margin: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* 添加阴影，突出层次感 */
+        }
+        h2 {
+            color: #002D72; /* 标题的颜色，深蓝色调 */
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* 添加阴影效果，增强可读性 */
+        }
+        .snowflake {
+            position: absolute;
+            top: -10px;
+            left: 0;
+            width: 10px;
+            height: 10px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+            animation: snowfall 5s linear infinite;
+        }
+        @keyframes snowfall {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(500px);
+            }
+        }
+        #countdown {
+            font-size: 25px;
+            font-weight: 550;
+            text-align: left;
+            margin-top: 10px;
+        }
+        #countdowntext {
+            font-size: 20px;
+            font-weight:1000;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* 添加阴影效果，增强可读性 */
+        }
+    </style>
+        <!--[if lt IE 9]>
+            <script src="js/html5shiv.js"></script>
+            <script src="js/respond.min.js"></script>
+        <![endif]-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/snowfall.jquery.js"></script>
 </head>
-
 <body>
-    <body onload="javascript:window.alert('在使用各个功能前，请查看用户协议，您已知晓？')"></body>
-    <span class="mobile btn-mobile-menu">
-        <i class="social iconfont icon-list btn-mobile-menu__icon"></i>
-        <i class="social iconfont icon-angleup btn-mobile-close__icon hidden"></i>
-    </span>
-    <header id="panel" class="panel-cover">
-        <div class="panel-main">
-            <div class="panel-main__inner panel-inverted">
-                <div class="panel-main__content">
-                    <div class="ih-item circle effect right_to_left">            
-                        <a href="#" title="" class="blog-button">
-                            <div class="img"><img src="./img/logo3.jpg" alt="img" class="js-avatar iUp profilepic"></div>
-                            <div class="info iUp">
-                                <div class="info-back">
-                                    <h2> 
-                                        
-                                            咕咕
-                                        
-                                    </h2>
-                                    <p>
-                                        
-                                            2023 · 鸽子
-                                        
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <h1 class="panel-cover__title panel-title iUp">
-                        <a href="#" title="Pigeon Server">Pigeon Server</a>
-                    </h1>
-                    <p class="panel-cover__subtitle panel-subtitle iUp">Code Create Life</p>
-                    <hr class="panel-cover__divider iUp" />
-                    <p><font size="6"> <strong><a href="http://eula.pigeonserver.xyz">点击查看用户协议</a></strong> </font></p>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <p id="description" class="panel-cover__description iUp">无大语，离大谱，摆大烂，破大防！
-                        <br/>
-                        <strong>-「至理名言」</strong>
-                    </p>
-                    <div class="navigation-wrapper iUp">
-                        <div>
-                            <nav class="cover-navigation cover-navigation--primary">
-                                <ul class="navigation">
-                                    <li class="navigation__item">
-                                        <a href="https://space.bilibili.com/627097633" class="blog-button">Bilibili</a>
-                                    </li>
-                                    <li class="navigation__item">
-                                        <a href="https://github.com/PigeonServer2023" class="blog-button">Github</a>
-                                    </li>
-                                    <li class="navigation__item">
-                                        <a href="https://app.pigeonserver.xyz/" class="blog-button">App</a>
-                                    </li>
-                                    <li class="navigation__item">
-                                        <a href="https://mc.pigeonserver.xyz/" class="blog-button">MC</a>
-                                    </li>
-                                    <li class="navigation__item">
-                                        <a href="https://live.pigeonserver.xyz:2096" class="blog-button" target="_blank">直播</a>
-                                    </li>
-                                    <li class="navigation__item">
-                                        <a href="https://blog.pigeonserver.xyz" class="blog-button" target="_blank">Blog</a>
-                                    </li>
-                                    <li class="navigation__item">
-                                        <a href="https://pan.pigeonserver.xyz:2096" class="blog-button" target="_blank">云盘</a>
-                                    </li>
-                                    <br></br>                              
-                                    <li class="navigation__item">
-                                        <a href="https://bbs.pigeonserver.xyz:8443" class="blog-button" target="_blank">论坛</a>
-                                    </li>                                    
-                                    <li class="navigation__item">
-                                        <a href="https://pic.pigeonserver.xyz:2096" class="blog-button" target="_blank">图床</a>
-                                    </li>
-                                    <li class="navigation__item">
-                                        <a href="https://skin.pigeonserver.xyz:2053" class="blog-button" target="_blank">皮肤站</a>
-                                    </li>                                    
-                                    <li class="navigation__item">
-                                        <a href="https://report.pigeonserver.xyz:2096/static/diaowen/answer-p.html?sid=380dmg" class="blog-button" target="_blank">举报与建议</a>
-                                    </li>
-                                    <br></br>                                    
-                                    <li class="navigation__item">
-                                        <a href="/" class="blog-button" target="_blank">更多功能，敬请期待</a>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
-                        <div class="iUp">
-                            <nav class="cover-navigation navigation--social">
-                                <ul class="navigation">
-                                    <li class="navigation__item">
-                                        <a href="https://github.com/pigeons2023" title="github" target="_blank">
-                                            <i class='social iconfont icon-github'></i>
-                                            <span class="label">github</span>
-                                        </a>
-                                    </li>
-
-
-                                    <li class="navigation__item">
-                                        <a href="mailto:pigeons2023@hotmail.com" title="email">
-                                            <i class='social iconfont icon-email'></i>
-                                            <span class="label">email</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="panel-cover--overlay cover-slate"></div>
-        </div>
+    <header>
+        <h1>2024年PigeonServer线上春晚</h1>
     </header>
-    <script type="text/javascript" src="./assets/js/jquery.min.js"></script>
-    <script type="text/javascript" src="./assets/js/fetch.min.js"></script>
-    <script type="text/javascript" src="./assets/js/main.js"></script>
+    <section id="count">
+        <h2>活动倒计时</h2>
+        <p>2024年2月8日20：00开始直播，提前20min暖场。</p>
+        <p id="countdowntext">距离直播正式开始: </p>
+        <div id="countdown"></div>
+        <script>
+          // 设置目标时间
+          var countdownDate = new Date("2024-02-08T20:00:00").getTime();
+          // 每秒更新倒计时
+          var countdownTimer = setInterval(function() {
+            // 获取当前时间
+            var now = new Date().getTime();
+            // 计算相差时间
+            var distance = countdownDate - now;
+            // 计算天、小时、分钟和秒数
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            // 将结果输出到页面上
+            document.getElementById("countdown").innerHTML = + days + " 天 " + hours + " 小时 "
+            + minutes + " 分钟 " + seconds + " 秒 ";
+            // 如果倒计时结束，清除计时器
+            if (distance < 0) {
+              clearInterval(countdownTimer);
+              document.getElementById("countdown").innerHTML = "直播已经开始！";
+            }
+          }, 1000);
+        </script>
+    </section>
+    <section id="introduction">
+        <h2>活动简介</h2>
+        <p>我们的春晚是一场由学生自主组织、制作和参与的线上文艺盛会，旨在传播中国传统文化，展现学生们的才艺，增进同学间的交流与友谊，体会春节带来的热闹非凡的气氛。</p>
+    </section>
+    <section id="introductiontoo">
+        <h2>团队介绍</h2>
+        <p>由一群鸽子组成的组织，每天只会咕咕咕~</p>
+        <p>但我们始终秉持着“无大语，离大谱，摆大烂，破大防!”的人生大道。</p>
+        <p>我们面向大家开放了PIS论坛、PIS云盘、PIS图床、PISMC服、PIS Skin服务。</p>
+        <p>今年，</p>
+        <p>我们首次尝试举办一次线上的春晚.</p>
+        <p>可能存在着很多不足之处，敬请各位提出宝贵意见。</p>
+    </section>
+    <section id="date">
+        <h2>举办日期</h2>
+        <p>2024年2月8日20：00开始直播，提前20min暖场。</p>
+        <p>演员们需要提前30min候场，过期不候！</p>
+    </section>
+    <section id="how-to-watch">
+        <h2>观看方式</h2>
+        <h3>介绍</h3>
+        <p>活动将通过企业微信，QQ频道，PIS自建直播平台三端同步直播，具体观看链接、二维码将在活动前一天通过官方群、官方宣发网站等通道发送。</p>
+        <h3>各直播通道优缺点</h3>
+        <p>企业微信直播：画质一般、稳定、互动性差</p>
+        <p>QQ频道直播：稳定、互动性好、画质较差</p>
+        <p>PIS自建直播平台：画质较差、不稳定、互动性差</p>
+        <h3>直播链接</h3>
+        <p>直播链接： QQ频道、QQ群、钉钉群、微信群内公布</a></p>
+    </section>
+    <section id="content">
+        <h2>活动内容</h2>
+        <p>活动将包括歌曲、舞蹈、小品、戏剧等多种形式的表演，以及互动环节和抽奖活动。</p>
+        <p>表演+小游戏+抽奖时长大概90分钟。</p>
+    </section>
+    <section id="contact">
+        <h2>负责人联系方式</h2>
+        <p>Email: pigeonserver@163.com</p>
+        <p>QQ：3481343411</p>
+	    <p>QQ：2133685523</p>
+    </section>
+    <section id="group-channel">
+        <h2>官方群通道</h2>
+        <p>请扫描下方二维码或点击下方图片加入我们的QQ群、QQ频道、钉钉群或微信群：</p>
+    <div class="image-container">
+        <a href="https://qm.qq.com/q/Kh9VDw0Heg"  target="_blank"><img src="img/1.png" alt="QQ群二维码"></a>
+        <a href="https://pd.qq.com/s/b60m3ysft" target="_blank"><img src="img/2.png" alt="QQ频道二维码"></a>
+        <a href="https://qr.dingtalk.com/action/joingroup?code=v1,k1,WIdrEbFMDRoiB1H8RIz1rB9I9KEGqWG39f6lnZ2KWhA=&_dt_no_comment=1&origin=11?" target="_blank"><img src="img/3.png" alt="钉钉群二维码"></a>
+        <a href="https://work.weixin.qq.com/gm/c5ab99fce1ae42e8fa1edd3334e512f7" target="_blank"><img src="img/4.png" alt="微信群二维码"></a>
+    </div> 
+    <style>
+    .image-container {
+      display: flex;
+      justify-content: left;
+      margin-bottom: 20px;
+    }
+    .image-container img {
+      width: 300px;
+      height: auto;
+      margin: 0 10px;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    }
+    /* 当屏幕宽度小于600像素时，调整图片容器样式 */
+    @media (max-width: 600px) {
+        .image-container {
+            flex-wrap: wrap; /* 将图片容器内的图片换行显示 */
+            justify-content: flex-start; /* 左对齐图片 */
+            margin-bottom: 10px;
+        }
+        .image-container img {
+            width: 100%; /* 图片宽度占满容器 */
+            margin: 5px 0; /* 调整图片之间的间距 */
+        }
+    }
+    </style>
+    </section>
+    <section id="program-submission">
+        <h2>征集节目的要求</h2>
+        <h3>类型</h3>
+        <p>接受歌曲、舞蹈、小品、戏剧、相声等各类表演形式的节目。</p>
+        <h3>要求</h3>
+        <p>节目内容需积极向上，不得涉及政治、宗教等敏感话题，展现青春风范，体现春节气息</p>
+        <h3>形式</h3>
+        <p>接受单人或团体表演，节目时长不超过10分钟，可选择直播表演或录制视频、音频这两种方式</p>
+        <h3>交稿方式</h3>
+        <p>请将节目录像以视频(mp4，1080p，横板)或者音频(MP3、WAV)格式发送至pigeonserver@163.com或QQ：3481343411。</p>
+        <p>或将直播表演申请发送至pigeonserver@163.com或QQ：3481343411。</p>
+        <h3>交稿日期</h3>
+        <p>最晚需在2024年2月6日前提交。</p>
+    </section>
+    <section id="advertisement">
+        <h2>广告征集</h2>
+        <p>因为本次活动具有一定规模，诚挚邀请各位广告商投稿。</p>
+        <h3>要求</h3>
+        <p>具有正能量，无恶意促进消费，诽谤、诋毁其他人或品牌，格式为视频(mp4，1080p，横板),具体事项请从以下联系方式中联系我们。</p>
+        <h3>联系方式</h3>
+        <p>QQ：3481343411</p>
+        <p>QQ：2133685523</p>
+        <h3>交稿日期</h3>
+        <p>最晚需在2024年2月4日前提交。</p>
+    </section> 
+    <footer>
+        <p>© 2024 PigeonServer线上春晚组委会. All rights reserved.</p>
+    </footer>
+    <script>
+        $(document).ready(function(){
+            $(document).snowfall({flakeCount : 100, maxSpeed : 10});
+            $('section').fadeIn(2000);
+        });
+    </script>
 </body>
 </html>
